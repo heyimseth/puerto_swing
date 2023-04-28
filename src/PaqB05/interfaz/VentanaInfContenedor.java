@@ -1,3 +1,4 @@
+// Álvaro Martínez Alfaro
 package PaqB05.interfaz;
 
 import javax.swing.*;
