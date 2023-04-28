@@ -1,3 +1,4 @@
+// Álvaro Martínez Alfaro
 package PaqB05;
 
 /**
@@ -169,7 +170,7 @@ public class Hub {
         for (int i = 0; i < this.contenedores.length; i++) {
             for (int j = 0; j < this.contenedores[i].length; j++) {
                 if (this.contenedores[i][j] != null) {
-                    s.append("   O   ");
+                    s.append(this.contenedores[i][j].getIdentificador() + "-" + this.contenedores[i][j].getPeso());
                 } else {
                     s.append("   L   ");
                 }
@@ -178,5 +179,19 @@ public class Hub {
         }
 
         return s.toString();
+    }
+
+    public int calcularPeso() {
+        int peso = 0;
+
+        for (int i = 0; i < this.contenedores.length; i++) {
+            for (int j = 0; j < this.contenedores[i].length; j++) {
+                if (this.contenedores[i][j] != null) {
+                    peso += this.contenedores[i][j].getPeso();
+                }
+            }
+        }
+
+        return peso;
     }
 }
